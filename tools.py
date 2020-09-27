@@ -1,10 +1,16 @@
 # 工具拓展模块
 # author: cuba3
-# github: https://github.com/cuba3/pyGregorian2LunarCalendar
+# github: https://github.com/OPN48/pyLunarCalendar
 
 # 去除空行
 from config import encryptionVectorList, thingsSort
 
+def rfRemove(l=[],removeList=[]):
+    for removeThing in list(set(l).intersection(set(removeList))):
+        l.remove(removeThing)
+    return l
+def rfAdd(l=[],addList=[]):
+    return list(set(l+addList))
 
 def not_empty(s):
     return s and s.strip()
